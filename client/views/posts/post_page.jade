@@ -1,0 +1,12 @@
+template(name="postPage")
+  +postItem this
+  ul.comments
+    each comments
+      +comment
+
+  if currentUser
+    +commentSubmit
+  else
+    p Please log in to leave a comment.
+
+

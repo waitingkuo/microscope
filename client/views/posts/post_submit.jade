@@ -1,0 +1,17 @@
+template(name="postSubmit")
+  form.main(role="form")
+    .class.form-group
+      label(for="url") URL
+      input.form-control(type="text", name="url", placeholder="Your URL")
+
+    .class.form-group
+      label(for="title") Title
+      input.form-control(type="text", name="title", value="" placeholder="Name your post")
+
+    .class.form-group
+      label(for="message") Message
+      textarea.form-control(type="text", name="message", value="")
+
+    button.btn.btn-default(type="submit") Submit
+
+

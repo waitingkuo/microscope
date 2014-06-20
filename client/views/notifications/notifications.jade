@@ -1,0 +1,23 @@
+template(name="notifications")
+  a.dropdown-toggle(href="#", data-toggle="dropdown")
+    span Notifications
+    if notificationCount
+      span.badge.badge-inverse #{notificationCount}
+    b.caret
+
+  ul.notification.dropdown-menu
+    if notificationCount
+      each notifications
+        +notification
+    else
+      li
+        span No Notifications
+
+template(name="notification")
+  li
+    a(href="#{notification}")
+      strong #{commenterName}
+      span commented on your post
+
+
+
